@@ -37,3 +37,5 @@ React.lazy() makes it easy to create components that are loaded using dynamic im
 
 React.lazy() takes as its argument a function that must return a promise by calling import() to load the component. The returned promise resolves to a module with a default export containing the React component.
 When webpack sees this syntax, it knows to dynamically create a separate bundle file for the moment library.
+# statement,expression,functional statement vs fuctional expression
+https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
