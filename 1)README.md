@@ -24,6 +24,22 @@ Normally, when the application compiles and runs, our code is bundled into a sin
 
 So, here comes React.lazy() to the rescue!
 
+
+React.lazy() performs lazy loading through Code Splitting. Here, code splitting means that our code is now not bundled in a single file, rather it is divided into smaller chunks (javascript files), and each chunk is loaded lazily, that is, as and when required.
+https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
+With the advent of ES modules, transpilers such as Babel, and bundlers such as webpack and Browserify, you can now write JavaScript applications in a completely modular pattern for easy maintainability. Usually, each module is imported and merged into a single file called a bundle, then the bundle is included on a webpage to load the entire app. As the app grows, the bundle size increases and eventually impacts page load times.
+
+Code-splitting is the process of dividing a large bundle of code into multiple bundles that can be loaded dynamically. This helps you avoid performance issues associated with oversized bundles without actually reducing the amount of code in your app.
+With the advent of ES modules, transpilers such as Babel, and bundlers such as webpack and Browserify, you can now write JavaScript applications in a completely modular pattern for easy maintainability. Usually, each module is imported and merged into a single file called a bundle, then the bundle is included on a webpage to load the entire app. As the app grows, the bundle size increases and eventually impacts page load times.
+
+Code-splitting is the process of dividing a large bundle of code into multiple bundles that can be loaded dynamically. This helps you avoid performance issues associated with oversized bundles without actually reducing the amount of code in your app.
+
+React.lazy() makes it easy to create components that are loaded using dynamic import() but rendered like regular components. This automatically causes the bundle containing the component to load when the component is rendered.
+
+React.lazy() takes as its argument a function that must return a promise by calling import() to load the component. The returned promise resolves to a module with a default export containing the React component.
+When webpack sees this syntax, it knows to dynamically create a separate bundle file for the moment library.
+# statement,expression,functional statement vs fuctional expression
+https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
 # Memory management and garbage collections
 The main concept of memory management in JavaScript is reachability.
 
@@ -47,18 +63,3 @@ There’s a background process in the JavaScript engine that is called garbage c
 
 https://medium.com/front-end-weekly/understanding-javascript-memory-management-using-garbage-collection-35ed4954a67f
 
-React.lazy() performs lazy loading through Code Splitting. Here, code splitting means that our code is now not bundled in a single file, rather it is divided into smaller chunks (javascript files), and each chunk is loaded lazily, that is, as and when required.
-https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
-With the advent of ES modules, transpilers such as Babel, and bundlers such as webpack and Browserify, you can now write JavaScript applications in a completely modular pattern for easy maintainability. Usually, each module is imported and merged into a single file called a bundle, then the bundle is included on a webpage to load the entire app. As the app grows, the bundle size increases and eventually impacts page load times.
-
-Code-splitting is the process of dividing a large bundle of code into multiple bundles that can be loaded dynamically. This helps you avoid performance issues associated with oversized bundles without actually reducing the amount of code in your app.
-With the advent of ES modules, transpilers such as Babel, and bundlers such as webpack and Browserify, you can now write JavaScript applications in a completely modular pattern for easy maintainability. Usually, each module is imported and merged into a single file called a bundle, then the bundle is included on a webpage to load the entire app. As the app grows, the bundle size increases and eventually impacts page load times.
-
-Code-splitting is the process of dividing a large bundle of code into multiple bundles that can be loaded dynamically. This helps you avoid performance issues associated with oversized bundles without actually reducing the amount of code in your app.
-
-React.lazy() makes it easy to create components that are loaded using dynamic import() but rendered like regular components. This automatically causes the bundle containing the component to load when the component is rendered.
-
-React.lazy() takes as its argument a function that must return a promise by calling import() to load the component. The returned promise resolves to a module with a default export containing the React component.
-When webpack sees this syntax, it knows to dynamically create a separate bundle file for the moment library.
-# statement,expression,functional statement vs fuctional expression
-https://medium.com/launch-school/javascript-expressions-and-statements-4d32ac9c0e74
