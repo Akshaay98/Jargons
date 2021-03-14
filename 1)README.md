@@ -24,6 +24,9 @@ Normally, when the application compiles and runs, our code is bundled into a sin
 
 So, here comes React.lazy() to the rescue!
 
+# Scope and Scope chain
+https://blog.bitsrc.io/understanding-scope-and-scope-chain-in-javascript-f6637978cf53
+
 
 React.lazy() performs lazy loading through Code Splitting. Here, code splitting means that our code is now not bundled in a single file, rather it is divided into smaller chunks (javascript files), and each chunk is loaded lazily, that is, as and when required.
 https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
