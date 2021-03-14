@@ -24,6 +24,29 @@ Normally, when the application compiles and runs, our code is bundled into a sin
 
 So, here comes React.lazy() to the rescue!
 
+# Memory management and garbage collections
+The main concept of memory management in JavaScript is reachability.
+
+Simply put, “reachable” values are those that are accessible or usable somehow. They are guaranteed to be stored in memory.
+
+There’s a base set of inherently reachable values, that cannot be deleted for obvious reasons.
+
+For instance:
+
+The currently executing function, its local variables and parameters.
+Other functions on the current chain of nested calls, their local variables and parameters.
+Global variables.
+(there are some other, internal ones as well)
+These values are called roots.
+
+Any other value is considered reachable if it’s reachable from a root by a reference or by a chain of references.
+
+For instance, if there’s an object in a global variable, and that object has a property referencing another object, that object is considered reachable. And those that it references are also reachable. Detailed examples to follow.
+
+There’s a background process in the JavaScript engine that is called garbage collector. It monitors all objects and removes those that have become unreachable.
+
+https://medium.com/front-end-weekly/understanding-javascript-memory-management-using-garbage-collection-35ed4954a67f
+
 React.lazy() performs lazy loading through Code Splitting. Here, code splitting means that our code is now not bundled in a single file, rather it is divided into smaller chunks (javascript files), and each chunk is loaded lazily, that is, as and when required.
 https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
 With the advent of ES modules, transpilers such as Babel, and bundlers such as webpack and Browserify, you can now write JavaScript applications in a completely modular pattern for easy maintainability. Usually, each module is imported and merged into a single file called a bundle, then the bundle is included on a webpage to load the entire app. As the app grows, the bundle size increases and eventually impacts page load times.
