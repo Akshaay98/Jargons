@@ -67,3 +67,4 @@ There’s a background process in the JavaScript engine that is called garbage c
 https://medium.com/front-end-weekly/understanding-javascript-memory-management-using-garbage-collection-35ed4954a67f
 
 
+![JIT](https://user-images.githubusercontent.com/79348083/111069863-150d9e00-84f5-11eb-82aa-58bcb5d2510c.PNG)
