@@ -21,7 +21,7 @@ Frontend: we use Webpack (which uses Babel and other things) to compile JS code 
 
 # Code-splitting in React (React.Lazy)  #
 Normally, when the application compiles and runs, our code is bundled into a single javascript file that is passed to the browser, but as our application grows, the bundle gets very heavy in size and cumbersome. It directly hampers the performance of the application as loading such a heavy file on initial load takes too much time, thus making our application slow.
-
+.
 So, here comes React.lazy() to the rescue!
 
 # Scope and Scope chain
