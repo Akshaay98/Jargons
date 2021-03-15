@@ -68,3 +68,6 @@ https://medium.com/front-end-weekly/understanding-javascript-memory-management-u
 
 
 ![JIT](https://user-images.githubusercontent.com/79348083/111069863-150d9e00-84f5-11eb-82aa-58bcb5d2510c.PNG)
+
+# Closures and Lexical envi
+https://blog.bitsrc.io/a-beginners-guide-to-closures-in-javascript-97d372284dda
